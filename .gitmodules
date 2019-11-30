@@ -1,0 +1,11 @@
+[submodule "thirdparty/pagedown"]
+	path = thirdparty/pagedown
+	url = https://github.com/ruler501/pagedown
+[submodule "thirdparty/MathJax"]
+	path = thirdparty/MathJax
+	url = https://github.com/mathjax/MathJax
+	branch = legacy-v2
+[submodule "thirdparty/php-markdown"]
+	path = thirdparty/php-markdown
+	url = https://github.com/michelf/php-markdown
+	branch = lib
