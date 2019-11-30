@@ -47,7 +47,7 @@ You must also create directories in the parent of this repository owned
 by the user that will be running these scripts. Create `../mathb-content`
 and `../usage`. Then you'll have to install the `php-dom` package.
 Setup your server to serve mathbin.php as the default page and redirect
-`/\d+/?` to `/?p=\d+`.
+`/\d+/?` to `/mathbin.php?p=\d+`.
 
 Static preview setup
 --------------------
