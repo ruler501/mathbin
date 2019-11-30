@@ -72,11 +72,6 @@ class MathBinView extends View
 ?>
     <!-- MathBinView::styles -->
     <style type="text/css">
-    #fb-widget {
-        margin-bottom: 1em;
-    }
-
-    #footerPanel #widgets,
     #footerPanel #software,
     #footerPanel #copyright {
         vertical-align: top;
@@ -86,7 +81,6 @@ class MathBinView extends View
         padding: 0 1em;
     }
 
-    #footerPanel #widgets *:first-child,
     #footerPanel #software *:first-child,
     #footerPanel #copyright *:first-child {
         margin-top: 0;
@@ -126,29 +120,13 @@ class MathBinView extends View
      */
     protected function footer()
     {
-        $this->socialSDKs();
 ?>
     <!-- MathBinView::footer -->
     <div id="footer">
-        <div id="widgets">
-            <div id="fb-widget">
-                <div class="fb-like-box"
-                     data-href="http://www.facebook.com/mathbin"
-                     data-height="188"
-                     data-colorscheme="light" data-show-faces="true"
-                     data-header="false" data-stream="false"
-                     data-show-border="true"></div>
-            </div>
-            <div id="gplus-widget">
-                <div class="g-page" data-width="300"
-                     data-href="//plus.google.com/115560622639690814168"
-                     data-layout="landscape" data-rel="publisher"></div>
-            </div>
-        </div> <!-- End widgets -->
         <div id="software">
             <p>
                 <a href="/"><?php $this->siteName() ?></a> is powered by
-                <a href="http://github.com/susam/mathb">MathB <?php echo
+                <a href="http://github.com/ruler501/mathbin">MathB <?php echo
                 $this->bag->applicationVersion ?></a>.
             </p>
             <p>
@@ -177,31 +155,6 @@ class MathBinView extends View
             </p>
         </div>
     </div>
-<?php
-    }
-
-
-    /**
-     * Outputs code to load social media SDKs
-     *
-     * This method outputs the HTML and JavaScript code to load the
-     * JavaScript SDKs of social media widgets.
-     *
-     * @return void
-     */
-    private function socialSDKs()
-    {
-?><!-- MathBinView::socialSDKs -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <script type="text/javascript"
-            src="https://apis.google.com/js/plusone.js"></script>
 <?php
     }
 

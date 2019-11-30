@@ -280,10 +280,10 @@ class Post
         }
 
         // Author's name should not contain special characters
-        if (preg_match('/^[a-zA-Z\.\' ]*$/', $this->name) === 0) {
+        if (preg_match('/^[a-zA-Z\.\' \d]*$/', $this->name) === 0) {
 
             $errors[] = 'Name must consist of letters ' .
-                        'from the English alphabet, ' .
+                        'from the English alphabet, numbers, ' .
                         'single-quotes, dots, and spaces only.';
         }
 

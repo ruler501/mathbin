@@ -36,32 +36,18 @@ rendered in the output. These third-party JavaScript libraries are:
   2. [Pagedown][T2]
   3. [MathJax][T3]
 
-These libraries are not included in the source code. They should be
-downloaded separtely and placed in the following two directories
-relative to this project's top level directory, i.e. the directory that
-contains the favicon.ico file.
-
-  1. thirdparty/php-markdown
-  2. thirdparty/pagedown
-  3. thirdparty/MathJax
-
-There is shell script called setup.sh which can be executed to
-automatically clone these third-party projects from their original
-source code repositories to the directories specified in the list above.
-To execute this script, first change your current working directory to
-this project's top level directory, i.e. the current working directory
-must be the directory that contains the main.php file. Then execute this
-command:
-
-    sh tools/setup.sh
-
-This script requires the `git` and `hg` commands to be present. If they
-are absent, install Git and Mercurial before running the script.
+These libraries are included as submodules so you should run
+`git submodule update --recursive` to retrieve them.
 
   [T1]: http://michelf.ca/projects/php-markdown/
   [T2]: http://code.google.com/p/pagedown/
   [T3]: http://www.mathjax.org/
 
+You must also create directories in the parent of this repository owned
+by the user that will be running these scripts. Create `../mathb-content`
+and `../usage`. Then you'll have to install the `php-dom` package.
+Setup your server to serve mathbin.php as the default page and redirect
+`/\d+/?` to `/?p=\d+`.
 
 Static preview setup
 --------------------
